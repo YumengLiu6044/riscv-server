@@ -1,0 +1,30 @@
+{
+	"scopeName": "source.riscv",
+	"name": "RISC-V Assembly",
+	"patterns": [
+		{
+			"name": "comment.line.number-sign.riscv",
+			"match": "#.*$"
+		},
+		{
+			"name": "keyword.instruction.riscv",
+			"match": "\\b((and|xor|or|add|(s[rl][la]))i?|sub|mul|divu?|remu?|auipc|nop|l[aid]|l[whb]u?|s[dwhb]|mv|[bs][egln][etq][uzi]?[u]?|j(al)?r?|ret|e?call)\\b"
+		},
+		{
+			"name": "keyword.directive.riscv",
+			"match": "\\.\\w+"
+		},
+		{
+			"name": "variable.register.riscv",
+			"match": "\\b(x[0-31]|zero|ra|sp|gp|tp|t[0-6]|s[\\d][01]?|a[0-7])\\b"
+		},
+		{
+			"name": "constant.numeric.riscv",
+			"match": "\\b(0x[\\da-fA-F]+|\\d+)\\b"
+		},
+		{
+			"name": "punctuation.separator.riscv",
+			"match": "[,:]"
+		}
+	]
+}
