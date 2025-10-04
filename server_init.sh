@@ -7,7 +7,8 @@ sudo rm -rf /opt/riscv
 sudo apt update
 sudo apt install autoconf automake python3 libmpc-dev libmpfr-dev \
     libgmp-dev gawk bison flex texinfo patchutils gcc g++ zlib1g-dev \
-    libexpat1-dev libslirp-dev git
+    libexpat1-dev libslirp-dev git qemu-user qemu-user-binfmt qemu-system-misc \
+    make
 
 # Build riscv toolchain from source
 sudo mkdir /opt/riscv
@@ -21,8 +22,7 @@ make clean
     --enable-qemu-system
 make linux
 
-# Install QEMU
-sudo apt install qemu-user qemu-user-binfmt qemu-system-misc
+# Setup QEMU
 sudo systemctl restart systemd-binfmt
 
 # Add tools to path
