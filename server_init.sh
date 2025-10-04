@@ -1,7 +1,9 @@
+# Go to root
 cd ~/
 
 # Clean up existing data
 sudo rm -rf /opt/riscv
+sudo rm -rf /riscv-gnu-toolchain
 
 # Install dependencies
 sudo apt update
