@@ -1,3 +1,5 @@
+cd ~/
+
 # Clean up existing data
 sudo rm -rf /opt/riscv
 
